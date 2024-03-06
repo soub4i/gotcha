@@ -52,11 +52,10 @@ func main() {
 			return
 		}
 		path := args[2]
-		fmt.Printf("Watching %s", path)
+		fmt.Printf("Watching %s \n", path)
 
 		go func() {
 			for {
-				fmt.Println("de")
 				select {
 				case event, ok := <-watcher.Events:
 					if !ok {
